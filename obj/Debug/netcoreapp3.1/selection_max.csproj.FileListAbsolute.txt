@@ -1,0 +1,13 @@
+C:\Users\maxjb\OneDrive - St Paul`s School\Documents\Programming\selection_max\bin\Debug\netcoreapp3.1\selection_max.exe
+C:\Users\maxjb\OneDrive - St Paul`s School\Documents\Programming\selection_max\bin\Debug\netcoreapp3.1\selection_max.deps.json
+C:\Users\maxjb\OneDrive - St Paul`s School\Documents\Programming\selection_max\bin\Debug\netcoreapp3.1\selection_max.runtimeconfig.json
+C:\Users\maxjb\OneDrive - St Paul`s School\Documents\Programming\selection_max\bin\Debug\netcoreapp3.1\selection_max.runtimeconfig.dev.json
+C:\Users\maxjb\OneDrive - St Paul`s School\Documents\Programming\selection_max\bin\Debug\netcoreapp3.1\selection_max.dll
+C:\Users\maxjb\OneDrive - St Paul`s School\Documents\Programming\selection_max\bin\Debug\netcoreapp3.1\selection_max.pdb
+C:\Users\maxjb\OneDrive - St Paul`s School\Documents\Programming\selection_max\obj\Debug\netcoreapp3.1\selection_max.csprojAssemblyReference.cache
+C:\Users\maxjb\OneDrive - St Paul`s School\Documents\Programming\selection_max\obj\Debug\netcoreapp3.1\selection_max.AssemblyInfoInputs.cache
+C:\Users\maxjb\OneDrive - St Paul`s School\Documents\Programming\selection_max\obj\Debug\netcoreapp3.1\selection_max.AssemblyInfo.cs
+C:\Users\maxjb\OneDrive - St Paul`s School\Documents\Programming\selection_max\obj\Debug\netcoreapp3.1\selection_max.csproj.CoreCompileInputs.cache
+C:\Users\maxjb\OneDrive - St Paul`s School\Documents\Programming\selection_max\obj\Debug\netcoreapp3.1\selection_max.dll
+C:\Users\maxjb\OneDrive - St Paul`s School\Documents\Programming\selection_max\obj\Debug\netcoreapp3.1\selection_max.pdb
+C:\Users\maxjb\OneDrive - St Paul`s School\Documents\Programming\selection_max\obj\Debug\netcoreapp3.1\selection_max.genruntimeconfig.cache
