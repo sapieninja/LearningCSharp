@@ -8,3 +8,17 @@ obj/Debug/netcoreapp3.1/Function Exercises.AssemblyInfo.cs
 obj/Debug/netcoreapp3.1/Function Exercises.AssemblyInfoInputs.cache
 obj/Debug/netcoreapp3.1/Function Exercises.assets.cache
 obj/Debug/netcoreapp3.1/Function Exercises.csprojAssemblyReference.cache
+.vscode/launch.json
+.vscode/tasks.json
+bin/Debug/netcoreapp3.1/Function Exercises.deps.json
+bin/Debug/netcoreapp3.1/Function Exercises.dll
+bin/Debug/netcoreapp3.1/Function Exercises.exe
+bin/Debug/netcoreapp3.1/Function Exercises.pdb
+bin/Debug/netcoreapp3.1/Function Exercises.runtimeconfig.dev.json
+bin/Debug/netcoreapp3.1/Function Exercises.runtimeconfig.json
+obj/Debug/netcoreapp3.1/Function Exercises.csproj.CoreCompileInputs.cache
+obj/Debug/netcoreapp3.1/Function Exercises.csproj.FileListAbsolute.txt
+obj/Debug/netcoreapp3.1/Function Exercises.dll
+obj/Debug/netcoreapp3.1/Function Exercises.exe
+obj/Debug/netcoreapp3.1/Function Exercises.genruntimeconfig.cache
+obj/Debug/netcoreapp3.1/Function Exercises.pdb

@@ -68,12 +68,21 @@ namespace Function_Exercises
             } while (i<sqrt);
             return true;
         }
+        static int spaces(string x)
+        {
+            return x.Split(' ').Length - 1;
+        }
+        static string convert(int a)
+        {
+            return "Binary:" + Convert.ToString(a,2) + "   Hex:" + Convert.ToString(a,16);
+        }
         static void Main()
         {
             Console.WriteLine(Convert.ToString(sum(1,2)));
             Console.WriteLine(Convert.ToString(sum(1f,2f)));
             Console.WriteLine(Convert.ToString(sumDigits(1000)));
             Console.WriteLine(Convert.ToString(isPrime(509)));
+            Console.WriteLine(convert(100));
         }
 
     }
