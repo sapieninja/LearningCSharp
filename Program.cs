@@ -72,6 +72,11 @@ namespace Function_Exercises
         {
             return x.Split(' ').Length - 1;
         }
+        static void swap(ref int a,ref int b)
+        {
+            int t=a;a=b;b=t;  
+        }
+        
         static string convert(int a)
         {
             return "Binary:" + Convert.ToString(a,2) + "   Hex:" + Convert.ToString(a,16);
@@ -83,6 +88,10 @@ namespace Function_Exercises
             Console.WriteLine(Convert.ToString(sumDigits(1000)));
             Console.WriteLine(Convert.ToString(isPrime(509)));
             Console.WriteLine(convert(100));
+            int i1 = 7;
+            int i2 = 9;
+            swap(ref i1,ref i2);
+            Console.WriteLine(i1 == 9 && i2 == 7);
         }
 
     }
