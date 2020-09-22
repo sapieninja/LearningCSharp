@@ -1,6 +1,5 @@
 ﻿/*
 Functions
-
 For all your functions, first generate some expected values for given inputs, then compare the results with the actual values generated. 
 
 Write quiet functions, with suitably meaningful names, that: 
@@ -28,7 +27,7 @@ using System;
 
 namespace Function_Exercises
 {
-    class Program
+    class Functions
     {
         static int sum(int a, int b)
         {
