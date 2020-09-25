@@ -56,7 +56,7 @@ namespace Iteration
                 }
                 x--;
             }
-            for(int y = 0;y<=10;y++)
+            for(int y = 0;y<10;y++)
             {
                 if((y*multiplier+sum)%11==0)
                 {
