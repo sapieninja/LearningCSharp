@@ -47,6 +47,7 @@ namespace Iteration
                 sum += x*number;
                 x--;
             }
+            
             return new int[10];
         }
         public static string ISBNfindMissing(string ISBNcode)
