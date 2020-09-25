@@ -1,2 +1,14 @@
 /.github
 /.vscode
+Iteration/bin/Debug/netcoreapp3.1/Iteration.dll
+Iteration/bin/Debug/netcoreapp3.1/Iteration.pdb
+Iteration/obj/Debug/netcoreapp3.1/Iteration.dll
+Iteration/obj/Debug/netcoreapp3.1/Iteration.pdb
+Iteration.Tests/bin/Debug/netcoreapp3.1/Iteration.dll
+Iteration.Tests/bin/Debug/netcoreapp3.1/Iteration.pdb
+Iteration.Tests/bin/Debug/netcoreapp3.1/ITeration.Tests.deps.json
+Iteration.Tests/bin/Debug/netcoreapp3.1/ITeration.Tests.dll
+Iteration.Tests/bin/Debug/netcoreapp3.1/ITeration.Tests.pdb
+Iteration.Tests/obj/Debug/netcoreapp3.1/ITeration.Tests.csprojAssemblyReference.cache
+Iteration.Tests/obj/Debug/netcoreapp3.1/ITeration.Tests.dll
+Iteration.Tests/obj/Debug/netcoreapp3.1/ITeration.Tests.pdb

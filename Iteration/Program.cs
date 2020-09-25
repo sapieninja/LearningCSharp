@@ -36,24 +36,40 @@ namespace Iteration
         {
             return (n*n+n)/2;
         }
-        static int[] findUnknown(int[] numbers)
+        static int findUnknown(int[] numbers,int location)
         {
             // Gets passed a ten digit array with a negative 1 to represent the unknown value
             // Turns this into a corrected array with the unknown found
             int sum = 0;
             int x = 10;
+            int multiplier = 0;
+            int answer = 0;
             foreach(int number in numbers)
-            {
-                sum += x*number;
+            {   
+                if(number>=0)
+                {
+                    sum += x*number;
+                }
+                else
+                {
+                multiplier = x;
+                }
                 x--;
             }
-            
-            return new int[10];
+            for(int y = 0;y<=10;y++)
+            {
+                if((y*multiplier+sum)%11==0)
+                {
+                    answer = y;
+                }
+            }
+            return answer;
         }
         public static string ISBNfindMissing(string ISBNcode)
         {
             int[] numbers = new int[10];
             int x = 0;
+            int location = ISBNcode.IndexOf('?');
             foreach(char element in ISBNcode)
             {   
                 numbers[x] = element-48;
@@ -70,9 +86,16 @@ namespace Iteration
                 }
                 x++;
             }
-            int[] correctedArray = findUnknown(numbers);
-
-            return "hello";
+            int answer = findUnknown(numbers,location);
+            string stringAnswer = "";
+            if(answer==10)
+            {
+                stringAnswer = "X";
+            }
+            else{
+                stringAnswer = Convert.ToString(answer);
+            }
+            return stringAnswer;
         }
         static void Main()
         {
