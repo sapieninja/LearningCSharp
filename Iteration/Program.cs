@@ -97,9 +97,28 @@ namespace Iteration
             }
             return stringAnswer;
         }
+        public static int toFront(int a)
+        {
+            string aString = Convert.ToString(a);
+            aString = aString[aString.Length-1] + aString.Substring(0,aString.Length-1);
+            return Convert.ToInt32(aString);
+        }
+        static int firstDouble()
+        {   
+            int x = 1;
+            while (true)
+            {
+                if(toFront(x)==x*2)
+                {
+                    break;
+                }
+                x++;
+            }
+            return x;
+        }
         static void Main()
         {
-            ISBNfindMissing("951?451570");
+            Console.WriteLine(firstDouble());
         }
         
     }

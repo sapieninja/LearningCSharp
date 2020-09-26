@@ -29,5 +29,15 @@ namespace Iteration
             string answer = Program.ISBNfindMissing(ISBNcode);
             Assert.AreEqual(expected,answer);
         }
+        [DataTestMethod]
+        [DataRow(120,12)]
+        [DataRow(0,0)]
+        [DataRow(1,1)]
+        [DataRow(10,1)]
+        public void TestToFront(int number,int expected)
+        {
+            int answer = Program.toFront(number);
+            Assert.AreEqual(expected,answer);
+        }
     }
 }
