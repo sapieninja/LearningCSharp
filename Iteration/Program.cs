@@ -97,15 +97,15 @@ namespace Iteration
             }
             return stringAnswer;
         }
-        public static int toFront(int a)
+        public static UInt64 toFront(UInt64 a)
         {
             string aString = Convert.ToString(a);
             aString = aString[aString.Length-1] + aString.Substring(0,aString.Length-1);
-            return Convert.ToInt32(aString);
+            return Convert.ToUInt64(aString);
         }
-        static int firstDouble()
+        static UInt64 firstDouble()
         {   
-            int x = 1;
+            UInt64 x = 1;
             while (true)
             {
                 if(toFront(x)==x*2)

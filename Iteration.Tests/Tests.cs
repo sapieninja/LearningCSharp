@@ -1,4 +1,5 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System;
 
 namespace Iteration
 {
@@ -34,9 +35,9 @@ namespace Iteration
         [DataRow(0,0)]
         [DataRow(1,1)]
         [DataRow(10,1)]
-        public void TestToFront(int number,int expected)
+        public void TestToFront(UInt64 number,int expected)
         {
-            int answer = Program.toFront(number);
+            UInt64 answer = Program.toFront(number);
             Assert.AreEqual(expected,answer);
         }
     }
