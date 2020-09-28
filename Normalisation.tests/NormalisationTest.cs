@@ -3,11 +3,12 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace Normalisation.tests
 {
     [TestClass]
-    public class UnitTest1
+    public class NormalisationTests
     {
         [TestMethod]
-        public void TestMethod1()
+        public void TestNormaliser()
         {
+            Assert.AreEqual("0111101100",Program.normaliser("0000111100001111"));
         }
     }
 }
