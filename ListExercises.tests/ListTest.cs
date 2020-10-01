@@ -1,13 +1,16 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-
-namespace ListExercises.tests
+using System.Collections.Generic;
+namespace ListExercises
 {
     [TestClass]
-    public class UnitTest1
+    public class ListTests
     {
         [TestMethod]
-        public void TestMethod1()
+        public void ToSumTest()
         {
+            var list = new List<int>(){5,5,5,5,5};
+            int expected = 25;
+            Assert.AreEqual(expected,ListExercises.Program.Sum(list));
         }
     }
 }
