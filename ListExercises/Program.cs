@@ -46,6 +46,20 @@ namespace ListExercises
             }
             return listNegative;        
         }
+        public static bool same(List<int> a,List<int> b)
+        {
+            foreach(int element in a)
+            {
+                if(b.Contains(element)==false)
+                    return false;
+            }
+            foreach(int element in b)
+            {
+                if(a.Contains(element)==false)
+                    return false;
+            }
+            return true;
+        }
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");

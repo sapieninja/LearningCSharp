@@ -33,5 +33,14 @@ namespace ListExercises
             int expected = -3;
             Assert.AreEqual(expected,Program.negative(list)[0]);
         }
+         [TestMethod]
+        public void areSameTest()
+        {
+            var lista = new List<int>(){5,5,5,5,-3};
+            var listb = new List<int>(){5,5,-3};
+            var listc = new List<int>(){5,4,-3};
+            Assert.IsTrue(Program.same(lista,listb));
+            Assert.IsFalse(Program.same(lista,listc));
+        }
     }
 }
