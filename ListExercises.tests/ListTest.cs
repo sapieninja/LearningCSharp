@@ -42,5 +42,22 @@ namespace ListExercises
             Assert.IsTrue(Program.same(lista,listb));
             Assert.IsFalse(Program.same(lista,listc));
         }
+         [TestMethod]
+        public void linearSearchTest()
+        {
+            var list = new List<int>{1,6,17,24,78,954,1486};
+            int inList = 78;
+            int notInList = 85;
+            Assert.IsTrue(Program.linearSearch(inList,list));
+            Assert.IsFalse(Program.linearSearch(notInList,list));
+        }
+        public void binarySearchTest()
+        {
+            var list = new List<int>{1,6,17,24,78,954,1486};
+            int inList = 78;
+            int notInList = 85;
+            Assert.IsTrue(Program.binarySearch(inList,list));
+            Assert.IsFalse(Program.binarySearch(notInList,list));
+        }
     }
 }

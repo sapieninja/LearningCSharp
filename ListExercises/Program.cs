@@ -60,6 +60,32 @@ namespace ListExercises
             }
             return true;
         }
+        public static bool linearSearch(int a,List<int> b)
+        {
+            foreach(int element in b)
+            {
+                if(element==a)
+                    return true;
+            }
+            return false;
+        }
+        public static bool binarySearch(int a,List<int> b)
+        {
+            int left = 0;
+            int right = b.Count;
+            while(left<=right)
+            {
+                int middle = (left+right)/2;
+                if(b[middle] < a)
+                    left = middle + 1;
+                else if(b[middle] > a)
+                    right = middle -1;
+                else
+                    return true;
+                
+            }
+            return false;
+        }
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
