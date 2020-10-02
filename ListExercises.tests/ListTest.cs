@@ -19,5 +19,19 @@ namespace ListExercises
             int expected = 5;
             Assert.AreEqual(expected,ListExercises.Program.Max((list)));
         }
+        [TestMethod]
+        public void ToMinTest()
+        {
+            var list = new List<int>(){5,5,5,5,4};
+            int expected = 4;
+            Assert.AreEqual(expected,ListExercises.Program.Min((list)));
+        }
+         [TestMethod]
+        public void ToNegativeTest()
+        {
+            var list = new List<int>(){5,5,5,5,-3};
+            int expected = -3;
+            Assert.AreEqual(expected,Program.negative(list)[0]);
+        }
     }
 }
