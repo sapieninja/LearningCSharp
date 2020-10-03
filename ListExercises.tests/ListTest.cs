@@ -59,5 +59,11 @@ namespace ListExercises
             Assert.IsTrue(Program.binarySearch(inList,list));
             Assert.IsFalse(Program.binarySearch(notInList,list));
         }
+        public void duplicatesTest()
+        {
+            var list = new List<int>{1,1,6,17,954,17,24,78,954,1486};
+            var duplicates = new List<int>{1,17,954};
+            Assert.AreEqual(duplicates,Program.duplications(list));
+        }
     }
 }

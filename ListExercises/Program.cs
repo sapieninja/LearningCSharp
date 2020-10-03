@@ -44,7 +44,7 @@ namespace ListExercises
                 if(element<0)
                     listNegative.Add(element);
             }
-            return listNegative;        
+            return listNegative;
         }
         public static bool same(List<int> a,List<int> b)
         {
@@ -85,6 +85,20 @@ namespace ListExercises
                 
             }
             return false;
+        }
+        public static List<int> duplications(List<int> a)
+        {
+            List<int> duplicates = new List<int>();
+            foreach(int element in a)
+            {
+                var amount = 
+                    from num in a
+                    where (num==element)
+                    select num;
+                if(amount.Count()>1&&a.Contains(element)==false)
+                    a.Add(element);                   
+            }
+            return duplicates;
         }
         static void Main(string[] args)
         {
