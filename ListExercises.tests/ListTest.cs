@@ -84,5 +84,21 @@ namespace ListExercises
             Assert.IsTrue(Program.isSubset(subset,biglist));
             Assert.IsFalse(Program.isSubset(biglist,subset));
         }
+        [TestMethod]
+        public void reverseTest()
+        {
+            var startlist = new List<int>{1,2,3,4,5,6,7,8,9,10};
+            var endlist = new List<int>{10,9,8,7,6,5,4,3,2,1};
+            var result = Program.reverse(startlist);
+             bool valid = true;
+            for(int i = 0;i<endlist.Count;i++)
+            {
+                if(endlist[i]!=result[i])
+                    valid = false;
+            }
+            if(endlist.Count!=result.Count)
+                valid = false;
+            Assert.IsTrue(valid);
+        }
     }
 }

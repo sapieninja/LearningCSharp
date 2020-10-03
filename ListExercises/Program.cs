@@ -110,6 +110,16 @@ namespace ListExercises
                 return true;
             return false;           
         }
+        public static List<int> reverse(List<int> toReverse)
+        {
+            for(int i = 0;i<(toReverse.Count/2);i++)
+            {
+                int temp = toReverse[i];
+                toReverse[i] = toReverse[toReverse.Count-i-1];
+                toReverse[toReverse.Count-i-1] = temp;
+            }
+            return toReverse;
+        }
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
