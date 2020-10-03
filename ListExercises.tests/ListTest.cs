@@ -51,6 +51,7 @@ namespace ListExercises
             Assert.IsTrue(Program.linearSearch(inList,list));
             Assert.IsFalse(Program.linearSearch(notInList,list));
         }
+        [TestMethod]
         public void binarySearchTest()
         {
             var list = new List<int>{1,6,17,24,78,954,1486};
@@ -59,11 +60,29 @@ namespace ListExercises
             Assert.IsTrue(Program.binarySearch(inList,list));
             Assert.IsFalse(Program.binarySearch(notInList,list));
         }
+        [TestMethod]
         public void duplicatesTest()
         {
             var list = new List<int>{1,1,6,17,954,17,24,78,954,1486};
             var duplicates = new List<int>{1,17,954};
-            Assert.AreEqual(duplicates,Program.duplications(list));
+            var result = Program.duplications(list);
+            bool valid = true;
+            for(int i = 0;i<duplicates.Count;i++)
+            {
+                if(duplicates[i]!=result[i])
+                    valid = false;
+            }
+            if(duplicates.Count!=result.Count)
+                valid = false;
+            Assert.IsTrue(valid);
+        }
+        [TestMethod]
+        public void subsetTest()
+        {
+            var biglist = new List<int>{1,5,68,383484,388,96,57};
+            var subset = new List<int>{1,5,388,57};
+            Assert.IsTrue(Program.isSubset(subset,biglist));
+            Assert.IsFalse(Program.isSubset(biglist,subset));
         }
     }
 }

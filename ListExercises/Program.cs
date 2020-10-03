@@ -95,10 +95,20 @@ namespace ListExercises
                     from num in a
                     where (num==element)
                     select num;
-                if(amount.Count()>1&&a.Contains(element)==false)
-                    a.Add(element);                   
+                if(amount.Count()>1&&duplicates.Contains(element)==false)
+                    duplicates.Add(element);                   
             }
             return duplicates;
+        }
+        public static bool isSubset(List<int> a,List<int> b)
+        {
+            var inboth = 
+                from num in a
+                where (b.Contains(num))
+                select num;
+            if(a.Count==inboth.Count())
+                return true;
+            return false;           
         }
         static void Main(string[] args)
         {
