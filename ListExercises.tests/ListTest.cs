@@ -100,5 +100,21 @@ namespace ListExercises
                 valid = false;
             Assert.IsTrue(valid);
         }
+        [TestMethod]
+        public void sortTest()
+        {
+            var startlist = new List<int>{10,1,5,7,8,9,6,3,2,4};
+            var endlist = new List<int>{1,2,3,4,5,6,7,8,9,10};
+            var result = Program.sort(startlist);
+            bool valid = true;
+            for(int i = 0;i<endlist.Count;i++)
+            {
+                if(endlist[i]!=result[i])
+                    valid = false;
+            }
+            if(endlist.Count!=result.Count)
+                valid = false;
+            Assert.IsTrue(valid);
+        }
     }
 }

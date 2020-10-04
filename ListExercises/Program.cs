@@ -120,6 +120,42 @@ namespace ListExercises
             }
             return toReverse;
         }
+        public static List<int> sort(List<int> toSort)
+        {
+            return(quicksort(toSort,0,toSort.Count-1));
+        }
+        static List<int> quicksort(List<int> toSort,int low, int high)
+        {   
+            if(high==low)
+            {
+                return toSort;
+            }
+            int p = 0;
+            int pivot = toSort[(low+high)/2];
+            int i = low -1;
+            int j = high + 1;
+            while (true)
+            {
+                do
+                {
+                    i++;
+                } while (toSort[i]<pivot);
+                do{
+                    j--;
+                } while (toSort[j]>pivot);
+                if(i>=j)
+                {
+                    p = j;
+                    break;
+                }
+                int temp = toSort[i];
+                toSort[i] = toSort[j];
+                toSort[j] = temp;
+            }
+            toSort = quicksort(toSort,low,p);
+            toSort = quicksort(toSort,p+1,high);
+            return toSort;
+        }
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
