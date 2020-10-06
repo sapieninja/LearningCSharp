@@ -41,5 +41,35 @@ namespace ListExercises
             denominator = values[1];
             return Convert.ToString(numerator) + '/' + Convert.ToString(denominator);
         }
+        static IEnumerable<string> decimals()
+        {   
+            for(int i = 1;i<10000;i++)
+            {
+                string number = Convert.ToString(i);
+                string output = "";
+                int finish = 4-number.Length;
+                for(int x=0;x<finish;x++)
+                {
+                    output += "0";
+                }
+                number = "0." + output + number;
+                yield return number;
+            }
+            
+        }
+        public static int unique()
+        {   
+            List<int> uniqueDenoms = new List<int>();
+            foreach(string number in decimals())
+            {
+                var values = simplify(Convert.ToInt32(number.Substring(2,4)),10000);
+                int denominator = values[1];
+                if(!uniqueDenoms.Contains(denominator))
+                {
+                    uniqueDenoms.Add(denominator);
+                }
+            }
+            return uniqueDenoms.Count;//Returns 24
+        }
     }
 }

@@ -131,5 +131,12 @@ namespace ListExercises
             var result = Fractions.fraction(input);
             Assert.AreEqual(expected,result);
         }
+        [TestMethod]
+        public void uniqueTest()
+        {
+            var expected = 24;
+            var result = Fractions.unique();
+            Assert.AreEqual(expected,result);
+        }
     }
 }

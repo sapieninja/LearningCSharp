@@ -159,7 +159,7 @@ namespace ListExercises
         }
         static void Main(string[] args)
         {
-           Console.WriteLine(Fractions.fraction("0.125"));
+           Console.WriteLine(Fractions.unique());
         }
     }
 }
