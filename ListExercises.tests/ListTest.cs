@@ -116,5 +116,20 @@ namespace ListExercises
                 valid = false;
             Assert.IsTrue(valid);
         }
+        [DataTestMethod]
+        [DataRow("0.125","1/8")]
+        [DataRow("0.9","9/10")]
+        [DataRow("0.0008","1/1250")]
+        [DataRow("0.49","49/100")]
+        [DataRow("0.2005","401/2000")]
+        [DataRow("0.1418","709/5000")]
+        [DataRow("0.7525","301/400")]
+        [DataRow("0.9952","622/625")]
+        [DataRow("0.016","2/125")]
+        public void fractionsTest(string input,string expected)
+        {
+            var result = Fractions.fraction(input);
+            Assert.AreEqual(expected,result);
+        }
     }
 }

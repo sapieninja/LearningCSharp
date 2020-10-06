@@ -159,20 +159,7 @@ namespace ListExercises
         }
         static void Main(string[] args)
         {
-            Random rnd = new Random();
-            for(int i=1;i<10000000;i=i+100000)
-            {
-                List<int> toSort = new List<int>();
-                for(int y = 0;y<i;y++)
-                {
-                    toSort.Add(rnd.Next());
-                }
-                Stopwatch sw = new Stopwatch();
-                sw.Start();
-                sort(toSort);
-                sw.Stop();
-                Console.WriteLine("{0},{1}",i,sw.Elapsed);
-            }
+           Console.WriteLine(Fractions.fraction("0.125"));
         }
     }
 }
