@@ -10,7 +10,7 @@ namespace ListExercises
         {
             var list = new List<int>(){5,5,5,5,5};
             int expected = 25;
-            Assert.AreEqual(expected,ListExercises.Program.Sum((list)));
+            Assert.AreEqual(expected,ListExercises. Program.Sum((list)));
         }
         [TestMethod]
         public void ToMaxTest()

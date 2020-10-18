@@ -14,7 +14,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Functions\Function Exercises.csproj" />
+    <ProjectReference Include="..\Iteration\Iteration.csproj" />
+    <ProjectReference Include="..\ListExercises\ListExercises.csproj" />
     <ProjectReference Include="..\Normalisation\Normalisation.csproj" />
+    <ProjectReference Include="..\Question6\Question6.csproj" />
+    <ProjectReference Include="..\selection\selection_max.csproj" />
   </ItemGroup>
 
 </Project>
