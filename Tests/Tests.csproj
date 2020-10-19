@@ -20,6 +20,7 @@
     <ProjectReference Include="..\Normalisation\Normalisation.csproj" />
     <ProjectReference Include="..\Question6\Question6.csproj" />
     <ProjectReference Include="..\selection\selection_max.csproj" />
+    <ProjectReference Include="..\Drats\Drats.csproj" />
   </ItemGroup>
 
 </Project>
