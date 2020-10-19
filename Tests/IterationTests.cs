@@ -1,43 +1,42 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Xunit;
 
 namespace Iteration
 {
-    [TestClass]
     public class IterationTests
     {
-        [DataTestMethod]
-        [DataRow(1,1)]
-        [DataRow(0,0)]
-        [DataRow(100,5050)]
+        [Theory]
+        [InlineData(1,1)]
+        [InlineData(0,0)]
+        [InlineData(100,5050)]
         public void TestTriangular(int n,int expected)
         {   
             var result = Program.triangular(n);
-            Assert.AreEqual(expected,result);
+            Assert.Equal(expected,result);
         }
-        [DataTestMethod,TestCategory("BIO")]
-        [DataRow("15688?111X","1")]
-        [DataRow("812071988?","3")]
-        [DataRow("020161586?","X")]
-        [DataRow("?131103628","0")]
-        [DataRow("?86046324X","1")]
-        [DataRow("1?68811306","5")]
-        [DataRow("951?451570","4")]
-        [DataRow("0393020?31","2")]
-        [DataRow("01367440?5","9")]
+        [Theory]
+        [InlineData("15688?111X","1")]
+        [InlineData("812071988?","3")]
+        [InlineData("020161586?","X")]
+        [InlineData("?131103628","0")]
+        [InlineData("?86046324X","1")]
+        [InlineData("1?68811306","5")]
+        [InlineData("951?451570","4")]
+        [InlineData("0393020?31","2")]
+        [InlineData("01367440?5","9")]
         public void TestISBN(string ISBNcode, string expected)
         {
             string answer = Program.ISBNfindMissing(ISBNcode);
-            Assert.AreEqual(expected,answer);
+            Assert.Equal(expected,answer);
         }
-        [DataTestMethod]
-        [DataRow(120,12)]
-        [DataRow(0,0)]
-        [DataRow(1,1)]
-        [DataRow(10,1)]
+        [Theory]
+        [InlineData(120,12)]
+        [InlineData(0,0)]
+        [InlineData(1,1)]
+        [InlineData(10,1)]
         public void TestToFront(int number,int expected)
         {
             int answer = Program.toFront(number);
-            Assert.AreEqual(expected,answer);
+            Assert.Equal(expected,answer);
         }
     }
 }

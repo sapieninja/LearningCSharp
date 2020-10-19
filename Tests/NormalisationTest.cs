@@ -1,14 +1,14 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Xunit;
 
 namespace Normalisation.tests
 {
-    [TestClass]
+
     public class NormalisationTests
     {
-        [TestMethod]
+        [Fact]
         public void TestNormaliser()
         {
-            Assert.AreEqual("0111101100",Program.normaliser("0000111100001111"));
+            Assert.Equal("0111101100",Program.normaliser("0000111100001111"));
         }
     }
 }

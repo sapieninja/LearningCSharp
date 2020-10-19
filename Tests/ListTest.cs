@@ -1,66 +1,65 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Xunit;
 using System.Collections.Generic;
 namespace ListExercises
 {
-    [TestClass]
     public class ListTests
     {
-        [TestMethod]
+        [Fact]
         public void ToSumTest()
         {
             var list = new List<int>(){5,5,5,5,5};
             int expected = 25;
-            Assert.AreEqual(expected,ListExercises. Program.Sum((list)));
+            Assert.Equal(expected,Program.Sum((list)));
         }
-        [TestMethod]
+        [Fact]
         public void ToMaxTest()
         {
             var list = new List<int>(){5,5,5,5,5};
             int expected = 5;
-            Assert.AreEqual(expected,ListExercises.Program.Max((list)));
+            Assert.Equal(expected,Program.Max((list)));
         }
-        [TestMethod]
+        [Fact]
         public void ToMinTest()
         {
             var list = new List<int>(){5,5,5,5,4};
             int expected = 4;
-            Assert.AreEqual(expected,ListExercises.Program.Min((list)));
+            Assert.Equal(expected,Program.Min((list)));
         }
-         [TestMethod]
+         [Fact]
         public void ToNegativeTest()
         {
             var list = new List<int>(){5,5,5,5,-3};
             int expected = -3;
-            Assert.AreEqual(expected,Program.negative(list)[0]);
+            Assert.Equal(expected,Program.negative(list)[0]);
         }
-         [TestMethod]
+         [Fact]
         public void areSameTest()
         {
             var lista = new List<int>(){5,5,5,5,-3};
             var listb = new List<int>(){5,5,-3};
             var listc = new List<int>(){5,4,-3};
-            Assert.IsTrue(Program.same(lista,listb));
-            Assert.IsFalse(Program.same(lista,listc));
+            Assert.True(Program.same(lista,listb));
+            Assert.False(Program.same(lista,listc));
         }
-         [TestMethod]
+         [Fact]
         public void linearSearchTest()
         {
             var list = new List<int>{1,6,17,24,78,954,1486};
             int inList = 78;
             int notInList = 85;
-            Assert.IsTrue(Program.linearSearch(inList,list));
-            Assert.IsFalse(Program.linearSearch(notInList,list));
+            Assert.True(Program.linearSearch(inList,list));
+            Assert.False(Program.linearSearch(notInList,list));
         }
-        [TestMethod]
+        [Fact]
         public void binarySearchTest()
         {
             var list = new List<int>{1,6,17,24,78,954,1486};
             int inList = 78;
             int notInList = 85;
-            Assert.IsTrue(Program.binarySearch(inList,list));
-            Assert.IsFalse(Program.binarySearch(notInList,list));
+            Assert.True(Program.binarySearch(inList,list));
+            Assert.False(Program.binarySearch(notInList,list));
         }
-        [TestMethod]
+        [Fact]
         public void duplicatesTest()
         {
             var list = new List<int>{1,1,6,17,954,17,24,78,954,1486};
@@ -74,17 +73,17 @@ namespace ListExercises
             }
             if(duplicates.Count!=result.Count)
                 valid = false;
-            Assert.IsTrue(valid);
+            Assert.True(valid);
         }
-        [TestMethod]
+        [Fact]
         public void subsetTest()
         {
             var biglist = new List<int>{1,5,68,383484,388,96,57};
             var subset = new List<int>{1,5,388,57};
-            Assert.IsTrue(Program.isSubset(subset,biglist));
-            Assert.IsFalse(Program.isSubset(biglist,subset));
+            Assert.True(Program.isSubset(subset,biglist));
+            Assert.False(Program.isSubset(biglist,subset));
         }
-        [TestMethod]
+        [Fact]
         public void reverseTest()
         {
             var startlist = new List<int>{1,2,3,4,5,6,7,8,9,10};
@@ -98,9 +97,9 @@ namespace ListExercises
             }
             if(endlist.Count!=result.Count)
                 valid = false;
-            Assert.IsTrue(valid);
+            Assert.True(valid);
         }
-        [TestMethod]
+        [Fact]
         public void sortTest()
         {
             var startlist = new List<int>{10,1,5,7,8,9,6,3,2,4};
@@ -114,29 +113,29 @@ namespace ListExercises
             }
             if(endlist.Count!=result.Count)
                 valid = false;
-            Assert.IsTrue(valid);
+            Assert.True(valid);
         }
-        [DataTestMethod]
-        [DataRow("0.125","1/8")]
-        [DataRow("0.9","9/10")]
-        [DataRow("0.0008","1/1250")]
-        [DataRow("0.49","49/100")]
-        [DataRow("0.2005","401/2000")]
-        [DataRow("0.1418","709/5000")]
-        [DataRow("0.7525","301/400")]
-        [DataRow("0.9952","622/625")]
-        [DataRow("0.016","2/125")]
+        [Theory]
+        [InlineData("0.125","1/8")]
+        [InlineData("0.9","9/10")]
+        [InlineData("0.0008","1/1250")]
+        [InlineData("0.49","49/100")]
+        [InlineData("0.2005","401/2000")]
+        [InlineData("0.1418","709/5000")]
+        [InlineData("0.7525","301/400")]
+        [InlineData("0.9952","622/625")]
+        [InlineData("0.016","2/125")]
         public void fractionsTest(string input,string expected)
         {
             var result = Fractions.fraction(input);
-            Assert.AreEqual(expected,result);
+            Assert.Equal(expected,result);
         }
-        [TestMethod]
+        [Fact]
         public void uniqueTest()
         {
             var expected = 24;
             var result = Fractions.unique();
-            Assert.AreEqual(expected,result);
+            Assert.Equal(expected,result);
         }
     }
 }

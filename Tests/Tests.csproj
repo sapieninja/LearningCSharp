@@ -8,19 +8,17 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.5.0" />
-    <PackageReference Include="MSTest.TestAdapter" Version="2.1.0" />
-    <PackageReference Include="MSTest.TestFramework" Version="2.1.0" />
+    <PackageReference Include="xunit" Version="2.4.0" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.4.0" />
     <PackageReference Include="coverlet.collector" Version="1.2.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Functions\Function Exercises.csproj" />
+    <ProjectReference Include="..\Drats\Drats.csproj" />
     <ProjectReference Include="..\Iteration\Iteration.csproj" />
     <ProjectReference Include="..\ListExercises\ListExercises.csproj" />
     <ProjectReference Include="..\Normalisation\Normalisation.csproj" />
     <ProjectReference Include="..\Question6\Question6.csproj" />
-    <ProjectReference Include="..\selection\selection_max.csproj" />
-    <ProjectReference Include="..\Drats\Drats.csproj" />
   </ItemGroup>
 
 </Project>
