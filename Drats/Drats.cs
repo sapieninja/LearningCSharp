@@ -17,7 +17,6 @@ namespace Drats
         }
         public static int noSolutions(int scoreToMake,int noDrats,bool FirstShot)
         {   
-            Console.WriteLine("{0},{1},{2}",scoreToMake,noDrats,FirstShot);
             int sum = 0;
             int drawer = scoreToMake/(Convert.ToInt32(FirstShot)+1);
             if(drawer>20)
