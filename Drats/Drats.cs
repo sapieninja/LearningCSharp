@@ -3,50 +3,74 @@ namespace Drats
 {
     public class Drats
     {   
-        //Code to check if this branch is possible
-        static bool possible(int scoreToMake,int noDrats,bool FirstShot)
-        {
-            int maxpossibleScore = 20*noDrats;
-            int minpossibleScore = noDrats;
-            if(FirstShot)
-            {
-                maxpossibleScore+=20;
-                minpossibleScore+=1;
-            }
-            return maxpossibleScore>=scoreToMake&&scoreToMake>=minpossibleScore;
-        }
-        public static int noSolutions(int scoreToMake,int noDrats,bool FirstShot)
+        public static int noWays(int target,int noDrats)
         {   
+            if(target>noDrats*20||noDrats==0)
+            {
+                return 0;
+            }
+            else if(target==noDrats)
+            {
+                return 1;
+            }
+            else if(noDrats==1)
+            {
+                if(target<=20&&target!=0)
+                {
+                    return 1;
+                }
+                return 0;
+            } 
+            else if(noDrats==2)
+            {
+                if(target>21)
+                {
+                    return 41-target;
+                }
+                return target-1;
+            }
+            else
+            {
+                int sum = 0;
+                for(int i = 1;i<=20;i++)
+                {   
+                    if(target-i<noDrats-1)
+                    {
+                        break;
+                    }
+                    sum += noWays(target-i,noDrats-1);
+                }
+                return sum;
+            }
+        }
+        public static int noSolutions(int target,int noDrats)
+        {
             int sum = 0;
-            int drawer = scoreToMake/(Convert.ToInt32(FirstShot)+1);
-            if(drawer>20)
-                drawer = 20;
-            while(drawer>0) //Makes sure that this next move will work 
-            {   
-                //Inside the loop I calculate all the possible combinations following this move that could work and add them to my sum 
-                int thisScore = drawer*(Convert.ToInt32(FirstShot)+1);
-                if(noDrats==1&&thisScore==scoreToMake)//checks if this drawer will finish the job (if so selects it)
-                {    
-                    sum++;
+            for(int i = 1;i<=20;i++)
+            {
+                if(i*2<=target)
+                {   
+                    if(i*2==target&&noDrats==1)
+                    {
+                        return 1;
+                    }
+                    else
+                    {
+                    int addition = noWays(target-i*2,noDrats-1);
+                    if(addition>0)
+                    {
+                        sum+=addition;
+                    }
+                    }
                 }
-                else if((noDrats==scoreToMake&&!FirstShot))
-                {
-                    sum++;
+                else
                     break;
-                }
-                else if(noDrats!=1)//Otherwise checks for working solutions
-                {
-                    if(possible(scoreToMake-thisScore,noDrats-1,false))
-                        //checks to see if this line could possibly work
-                        sum += noSolutions(scoreToMake - thisScore,noDrats-1,false);
-                }
-                drawer--;
             }
             return sum;
         }
         static void Main()
         {
-            Console.WriteLine(noSolutions(83,5,true));
+            Console.WriteLine(noSolutions(83,5));
         }
     }
 }
