@@ -12,7 +12,7 @@ namespace Drats
             else if(target==noDrats)
             {
                 return 1;
-            }
+            } 
             else if(noDrats==1)
             {
                 if(target<=20&&target!=0)
@@ -70,7 +70,15 @@ namespace Drats
         }
         static void Main()
         {
-            Console.WriteLine(noSolutions(83,5));
+            for(int i = 3;i<100;i++)
+            {
+                if(noSolutions(i,3) == 0)
+                {
+                    Console.WriteLine(i);
+                }
+                //gives me 61 for 2 drats
+                //and 81 for 3 drats
+            }
         }
     }
 }
