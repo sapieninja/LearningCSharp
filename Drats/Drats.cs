@@ -3,7 +3,7 @@ namespace Drats
 {
     public class Drats
     {   
-        public static int noWays(int target,int noDrats)
+        public static int NoWays(int target,int noDrats)
         {   
             if(target>noDrats*20||noDrats==0)
             {
@@ -38,12 +38,12 @@ namespace Drats
                     {
                         break;
                     }
-                    sum += noWays(target-i,noDrats-1);
+                    sum += NoWays(target-i,noDrats-1);
                 }
                 return sum;
             }
         }
-        public static int noSolutions(int target,int noDrats)
+        public static int NoSolutions(int target,int noDrats)
         {
             int sum = 0;
             for(int i = 1;i<=20;i++)
@@ -56,7 +56,7 @@ namespace Drats
                     }
                     else
                     {
-                    int addition = noWays(target-i*2,noDrats-1);
+                    int addition = NoWays(target-i*2,noDrats-1);
                     if(addition>0)
                     {
                         sum+=addition;
@@ -72,7 +72,7 @@ namespace Drats
         {
             for(int i = 3;i<100;i++)
             {
-                if(noSolutions(i,3) == 0)
+                if(NoSolutions(i,3) == 0)
                 {
                     Console.WriteLine(i);
                 }

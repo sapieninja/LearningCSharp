@@ -14,7 +14,7 @@ namespace Normalisation
 {
     public class Program
     {   
-        public static string normaliser(string unnormalised)
+        public static string Normaliser(string unnormalised)
         {
             string mantissa = unnormalised.Substring(0,12);
             string exponent = unnormalised.Substring(12,4);
@@ -25,9 +25,9 @@ namespace Normalisation
             }
             return mantissa.Substring(0,6) + exponent;
         }
-        static void Main(string[] args)
+        static void Main()
         {   
-            Console.WriteLine(normaliser("0000111100001111"));
+            Console.WriteLine(Normaliser("0000111100001111"));
         }
     }
 }

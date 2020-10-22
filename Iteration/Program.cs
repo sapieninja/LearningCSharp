@@ -12,7 +12,7 @@ namespace Iteration
             }
             Console.WriteLine("Blast Off");
         }
-        static void timesTable(int table,int amount)
+        static void TimesTable(int table,int amount)
         {   
             int x = 1;
             do
@@ -21,7 +21,7 @@ namespace Iteration
                 x++;
             } while (x<amount);
         }
-        static void askN(int n)
+        static void AskN(int n)
         {
             double sum = 0;
             Console.WriteLine("Enter" + n + "values");
@@ -32,11 +32,11 @@ namespace Iteration
             Console.WriteLine("Total" + sum);
             Console.WriteLine("Total" + (sum/n));
         }
-        public static int triangular(int n)
+        public static int Triangular(int n)
         {
             return (n*n+n)/2;
         }
-        static int findUnknown(int[] numbers,int location)
+        static int FindUnknown(int[] numbers)
         {
             // Gets passed a ten digit array with a negative 1 to represent the unknown value
             // Turns this into a corrected array with the unknown found
@@ -69,7 +69,6 @@ namespace Iteration
         {
             int[] numbers = new int[10];
             int x = 0;
-            int location = ISBNcode.IndexOf('?');
             foreach(char element in ISBNcode)
             {   
                 numbers[x] = element-48;
@@ -86,8 +85,8 @@ namespace Iteration
                 }
                 x++;
             }
-            int answer = findUnknown(numbers,location);
-            string stringAnswer = "";
+            int answer = FindUnknown(numbers);
+            string stringAnswer;
             if(answer==10)
             {
                 stringAnswer = "X";
@@ -97,15 +96,18 @@ namespace Iteration
             }
             return stringAnswer;
         }
-        public static int toFront(int a)
+        public static int ToFront(int a)
         {
             string aString = Convert.ToString(a);
-            aString = aString[aString.Length-1] + aString.Substring(0,aString.Length-1);
+            aString = aString[^1] + aString[0..^1];
             return Convert.ToInt32(aString);
         }
         static void Main()
         {
             Console.WriteLine("hello world");
+            CountDown(5);
+            TimesTable(5,5);
+            AskN(5);
         }
         
     }

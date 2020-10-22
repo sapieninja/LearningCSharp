@@ -4,7 +4,7 @@ namespace ListExercises
 {
     public class Fractions
     {
-        static List<int> simplify(int numerator,int denominator)
+        static List<int> Simplify(int numerator,int denominator)
         {
             int minValue = numerator;
             bool doAgain = false;
@@ -12,22 +12,22 @@ namespace ListExercises
             {
                 if(numerator%i==0&&denominator%i==0)
                 {
-                    numerator = numerator/i;
-                    denominator = denominator/i;
+                    numerator /= i;
+                    denominator /= i;
                     doAgain = true;
                     break;
                 }
             }
             if(doAgain)
             {
-                var newList = simplify(numerator,denominator);
+                var newList = Simplify(numerator,denominator);
                 numerator = newList[0];
                 denominator = newList[1];
             }
             List<int> toReturn = new List<int>{numerator,denominator};
             return toReturn;
         }
-        public static string fraction(string input)
+        public static string Fraction(string input)
         {
             int difference = 6 - input.Length;
             for(int i = 0;i<difference;i++)
@@ -36,12 +36,12 @@ namespace ListExercises
             }
             int numerator = Convert.ToInt32(input.Substring(2,4));
             int denominator = 10000;
-            var values = simplify(numerator,denominator);
+            var values = Simplify(numerator,denominator);
             numerator = values[0];
             denominator = values[1];
             return Convert.ToString(numerator) + '/' + Convert.ToString(denominator);
         }
-        static IEnumerable<string> decimals()
+        static IEnumerable<string> Decimals()
         {   
             for(int i = 1;i<10000;i++)
             {
@@ -57,12 +57,12 @@ namespace ListExercises
             }
             
         }
-        public static int unique()
+        public static int Unique()
         {   
             List<int> uniqueDenoms = new List<int>();
-            foreach(string number in decimals())
+            foreach(string number in Decimals())
             {
-                var values = simplify(Convert.ToInt32(number.Substring(2,4)),10000);
+                var values = Simplify(Convert.ToInt32(number.Substring(2,4)),10000);
                 int denominator = values[1];
                 if(!uniqueDenoms.Contains(denominator))
                 {

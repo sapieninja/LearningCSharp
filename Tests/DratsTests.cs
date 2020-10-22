@@ -18,7 +18,7 @@ namespace Drats
         [InlineData(95,8,515725220)]
         public void TestDrats(int scoreToMake,int noDrats,int expected)
         {
-            var result = Drats.noSolutions(scoreToMake,noDrats);
+            var result = Drats.NoSolutions(scoreToMake,noDrats);
             Assert.Equal(expected,result);
         }
     }

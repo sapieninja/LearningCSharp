@@ -4,15 +4,15 @@ namespace selection_max
 {
     class Program
     {
-        static void isequal(int a, int b)
+        static void Isequal(int a, int b)
         {
             Console.WriteLine(Convert.ToString(a == b));
         }
-        static void iseven(int a)
+        static void Iseven(int a)
         {
             Console.WriteLine(Convert.ToString(Convert.ToBoolean(a % 2 + 1)));
         }
-        static bool leap(int a)
+        static bool Leap(int a)
         {
             if (a % 4 == 0)
             {
@@ -37,7 +37,7 @@ namespace selection_max
                 return false;
             }
         }
-        static int max(int a, int b, int c)
+        static int Max(int a, int b, int c)
         {
             if (a > b && b > c)
             {
@@ -52,7 +52,7 @@ namespace selection_max
                 return c;
             }
         }
-        static void coords(int x, int y, int r,int x1, int y1)
+        static void Coords(int x, int y, int r,int x1, int y1)
         {
             if(x>=0)
             {
@@ -93,7 +93,7 @@ namespace selection_max
                 Console.WriteLine("Not Within radius");
             }
         }
-        static void score(int a, int b, int c)
+        static void Score(int a, int b, int c)
         {
             double avg = (a+b+c)/3.0f;
             if(avg > 90f)
@@ -117,7 +117,7 @@ namespace selection_max
                 Console.WriteLine("F");
             }
         }
-        static void triangle(int a,int b,int c)
+        static void Triangle(int a,int b,int c)
         {   
             if((a+b)<c | (a+c)<b | (c+b)<a)
             {
@@ -138,12 +138,13 @@ namespace selection_max
         }
         static void Main()
         {
-            isequal(1, 1);
-            iseven(3);
-            Console.WriteLine(Convert.ToString(leap(2000)));
-            Console.WriteLine(max(1, 40, 29));
-            coords(3,4,5,5,6);
-            triangle(20,20,2);
+            Isequal(1, 1);
+            Iseven(3);
+            Console.WriteLine(Convert.ToString(Leap(2000)));
+            Console.WriteLine(Max(1, 40, 29));
+            Coords(3,4,5,5,6);
+            Triangle(20,20,2);
+            Score(5,10,5);
         }
     }
 }

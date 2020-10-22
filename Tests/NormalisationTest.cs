@@ -8,7 +8,7 @@ namespace Normalisation.tests
         [Fact]
         public void TestNormaliser()
         {
-            Assert.Equal("0111101100",Program.normaliser("0000111100001111"));
+            Assert.Equal("0111101100",Program.Normaliser("0000111100001111"));
         }
     }
 }

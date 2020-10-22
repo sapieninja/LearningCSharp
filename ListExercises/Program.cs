@@ -37,7 +37,7 @@ namespace ListExercises
             }
             return min;
         }
-        public static List<int> negative(List<int> toNegative)
+        public static List<int> Negative(List<int> toNegative)
         {
             List<int> listNegative = new List<int>();
             foreach(int element in toNegative)
@@ -47,7 +47,7 @@ namespace ListExercises
             }
             return listNegative;
         }
-        public static bool same(List<int> a,List<int> b)
+        public static bool Same(List<int> a,List<int> b)
         {
             foreach(int element in a)
             {
@@ -61,7 +61,7 @@ namespace ListExercises
             }
             return true;
         }
-        public static bool linearSearch(int a,List<int> b)
+        public static bool LinearSearch(int a,List<int> b)
         {
             foreach(int element in b)
             {
@@ -70,7 +70,7 @@ namespace ListExercises
             }
             return false;
         }
-        public static bool binarySearch(int a,List<int> b)
+        public static bool BinarySearch(int a,List<int> b)
         {
             int left = 0;
             int right = b.Count;
@@ -87,7 +87,7 @@ namespace ListExercises
             }
             return false;
         }
-        public static List<int> duplications(List<int> a)
+        public static List<int> Duplications(List<int> a)
         {
             List<int> duplicates = new List<int>();
             foreach(int element in a)
@@ -101,7 +101,7 @@ namespace ListExercises
             }
             return duplicates;
         }
-        public static bool isSubset(List<int> a,List<int> b)
+        public static bool IsSubset(List<int> a,List<int> b)
         {
             var inboth = 
                 from num in a
@@ -111,7 +111,7 @@ namespace ListExercises
                 return true;
             return false;           
         }
-        public static List<int> reverse(List<int> toReverse)
+        public static List<int> Reverse(List<int> toReverse)
         {
             for(int i = 0;i<(toReverse.Count/2);i++)
             {
@@ -121,17 +121,17 @@ namespace ListExercises
             }
             return toReverse;
         }
-        public static List<int> sort(List<int> toSort)
+        public static List<int> Sort(List<int> toSort)
         {
-            return(quicksort(toSort,0,toSort.Count-1));
+            return(Quicksort(toSort,0,toSort.Count-1));
         }
-        static List<int> quicksort(List<int> toSort,int low, int high)
+        private static List<int> Quicksort(List<int> toSort,int low, int high)
         {   
             if(high==low)
             {
                 return toSort;
             }
-            int p = 0;
+            int p;
             int pivot = toSort[(low+high)/2];
             int i = low -1;
             int j = high + 1;
@@ -153,13 +153,13 @@ namespace ListExercises
                 toSort[i] = toSort[j];
                 toSort[j] = temp;
             }
-            toSort = quicksort(toSort,low,p);
-            toSort = quicksort(toSort,p+1,high);
+            toSort = Quicksort(toSort,low,p);
+            toSort = Quicksort(toSort,p+1,high);
             return toSort;
         }
-        static void Main(string[] args)
+        static void Main()
         {
-           Console.WriteLine(Fractions.unique());
+           Console.WriteLine(Fractions.Unique());
         }
     }
 }

@@ -29,19 +29,19 @@ namespace Function_Exercises
 {
     class Functions
     {
-        static int sum(int a, int b)
+        static int Sum(int a, int b)
         {
             return a + b;
         }
-        static double sum(double a, double b)
+        static double Sum(double a, double b)
         {
             return a + b;
         }
-        static int sumDigits(int a)
+        static int SumDigits(int a)
         {
             return Convert.ToString(a).Length;
         }
-        static bool isPrime(int a)
+        static bool IsPrime(int a)
         {
             if(a==1)
             {
@@ -67,29 +67,25 @@ namespace Function_Exercises
             } while (i<sqrt);
             return true;
         }
-        static int spaces(string x)
-        {
-            return x.Split(' ').Length - 1;
-        }
-        static void swap(ref int a,ref int b)
+        static void Swap(ref int a,ref int b)
         {
             int t=a;a=b;b=t;  
         }
         
-        static string convert(int a)
+        static string Conversion(int a)
         {
             return "Binary:" + Convert.ToString(a,2) + "   Hex:" + Convert.ToString(a,16);
         }
         static void Main()
         {
-            Console.WriteLine(Convert.ToString(sum(1,2)));
-            Console.WriteLine(Convert.ToString(sum(1f,2f)));
-            Console.WriteLine(Convert.ToString(sumDigits(1000)));
-            Console.WriteLine(Convert.ToString(isPrime(509)));
-            Console.WriteLine(convert(100));
+            Console.WriteLine(Convert.ToString(Sum(1,2)));
+            Console.WriteLine(Convert.ToString(Sum(1f,2f)));
+            Console.WriteLine(Convert.ToString(SumDigits(1000)));
+            Console.WriteLine(Convert.ToString(IsPrime(509)));
+            Console.WriteLine(Conversion(100));
             int i1 = 7;
             int i2 = 9;
-            swap(ref i1,ref i2);
+            Swap(ref i1,ref i2);
             Console.WriteLine(i1 == 9 && i2 == 7);
         }
 

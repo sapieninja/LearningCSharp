@@ -10,7 +10,7 @@ namespace Iteration
         [InlineData(100,5050)]
         public void TestTriangular(int n,int expected)
         {   
-            var result = Program.triangular(n);
+            var result = Program.Triangular(n);
             Assert.Equal(expected,result);
         }
         [Theory]
@@ -35,7 +35,7 @@ namespace Iteration
         [InlineData(10,1)]
         public void TestToFront(int number,int expected)
         {
-            int answer = Program.toFront(number);
+            int answer = Program.ToFront(number);
             Assert.Equal(expected,answer);
         }
     }

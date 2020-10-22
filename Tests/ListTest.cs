@@ -30,41 +30,41 @@ namespace ListExercises
         {
             var list = new List<int>(){5,5,5,5,-3};
             int expected = -3;
-            Assert.Equal(expected,Program.negative(list)[0]);
+            Assert.Equal(expected,Program.Negative(list)[0]);
         }
          [Fact]
-        public void areSameTest()
+        public void AreSameTest()
         {
             var lista = new List<int>(){5,5,5,5,-3};
             var listb = new List<int>(){5,5,-3};
             var listc = new List<int>(){5,4,-3};
-            Assert.True(Program.same(lista,listb));
-            Assert.False(Program.same(lista,listc));
+            Assert.True(Program.Same(lista,listb));
+            Assert.False(Program.Same(lista,listc));
         }
          [Fact]
-        public void linearSearchTest()
+        public void LinearSearchTest()
         {
             var list = new List<int>{1,6,17,24,78,954,1486};
             int inList = 78;
             int notInList = 85;
-            Assert.True(Program.linearSearch(inList,list));
-            Assert.False(Program.linearSearch(notInList,list));
+            Assert.True(Program.LinearSearch(inList,list));
+            Assert.False(Program.LinearSearch(notInList,list));
         }
         [Fact]
-        public void binarySearchTest()
+        public void BinarySearchTest()
         {
             var list = new List<int>{1,6,17,24,78,954,1486};
             int inList = 78;
             int notInList = 85;
-            Assert.True(Program.binarySearch(inList,list));
-            Assert.False(Program.binarySearch(notInList,list));
+            Assert.True(Program.BinarySearch(inList,list));
+            Assert.False(Program.BinarySearch(notInList,list));
         }
         [Fact]
-        public void duplicatesTest()
+        public void DuplicatesTest()
         {
             var list = new List<int>{1,1,6,17,954,17,24,78,954,1486};
             var duplicates = new List<int>{1,17,954};
-            var result = Program.duplications(list);
+            var result = Program.Duplications(list);
             bool valid = true;
             for(int i = 0;i<duplicates.Count;i++)
             {
@@ -76,19 +76,19 @@ namespace ListExercises
             Assert.True(valid);
         }
         [Fact]
-        public void subsetTest()
+        public void SubsetTest()
         {
             var biglist = new List<int>{1,5,68,383484,388,96,57};
             var subset = new List<int>{1,5,388,57};
-            Assert.True(Program.isSubset(subset,biglist));
-            Assert.False(Program.isSubset(biglist,subset));
+            Assert.True(Program.IsSubset(subset,biglist));
+            Assert.False(Program.IsSubset(biglist,subset));
         }
         [Fact]
-        public void reverseTest()
+        public void ReverseTest()
         {
             var startlist = new List<int>{1,2,3,4,5,6,7,8,9,10};
             var endlist = new List<int>{10,9,8,7,6,5,4,3,2,1};
-            var result = Program.reverse(startlist);
+            var result = Program.Reverse(startlist);
              bool valid = true;
             for(int i = 0;i<endlist.Count;i++)
             {
@@ -100,11 +100,11 @@ namespace ListExercises
             Assert.True(valid);
         }
         [Fact]
-        public void sortTest()
+        public void SortTest()
         {
             var startlist = new List<int>{10,1,5,7,8,9,6,3,2,4};
             var endlist = new List<int>{1,2,3,4,5,6,7,8,9,10};
-            var result = Program.sort(startlist);
+            var result = Program.Sort(startlist);
             bool valid = true;
             for(int i = 0;i<endlist.Count;i++)
             {
@@ -125,16 +125,16 @@ namespace ListExercises
         [InlineData("0.7525","301/400")]
         [InlineData("0.9952","622/625")]
         [InlineData("0.016","2/125")]
-        public void fractionsTest(string input,string expected)
+        public void FractionsTest(string input,string expected)
         {
-            var result = Fractions.fraction(input);
+            var result = Fractions.Fraction(input);
             Assert.Equal(expected,result);
         }
         [Fact]
-        public void uniqueTest()
+        public void UniqueTest()
         {
             var expected = 24;
-            var result = Fractions.unique();
+            var result = Fractions.Unique();
             Assert.Equal(expected,result);
         }
     }
