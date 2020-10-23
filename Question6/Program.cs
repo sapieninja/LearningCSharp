@@ -1,6 +1,4 @@
-﻿using System.Diagnostics.CodeAnalysis;
-using System.Diagnostics.Contracts;
-using System;
+﻿using System;
 using System.Collections.Generic;
 namespace Question6
 {
