@@ -6,13 +6,10 @@ namespace ComputingTest
 {
     class Program
     {
-        public static int Repeats(List<int> source)
+        public static int Repeats(List<int> source) => source.Where(x => source.Count(y => y == x) == 1).Sum();
+        static void Main()
         {
-            var notrepeated =
-                            from x in source
-                            where (source.Count(y => y == x) == 1)
-                            select x;
-            return notrepeated.Sum();
+            Console.WriteLine(Repeats(new List<int> { 5, 5, 4, 4, 3, 2, 7 }));
         }
     }
 }

@@ -15,9 +15,5 @@ namespace ConsoleApp
             }
             return output;
         }
-        public static void Main(string[] args)
-        {
-            var x = Pyramid(3);
-        }
     }
 }
