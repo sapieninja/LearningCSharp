@@ -20,6 +20,7 @@
     <ProjectReference Include="..\Normalisation\Normalisation.csproj" />
     <ProjectReference Include="..\Question6\Question6.csproj" />
     <ProjectReference Include="..\ComputingTest\ComputingTest.csproj" />
+    <ProjectReference Include="..\CustomStack\CustomStack.csproj" />
   </ItemGroup>
 
 </Project>
