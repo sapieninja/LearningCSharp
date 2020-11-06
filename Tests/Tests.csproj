@@ -21,6 +21,7 @@
     <ProjectReference Include="..\Question6\Question6.csproj" />
     <ProjectReference Include="..\ComputingTest\ComputingTest.csproj" />
     <ProjectReference Include="..\CustomStack\CustomStack.csproj" />
+    <ProjectReference Include="..\PaindromicNumbers\PaindromicNumbers.csproj" />
   </ItemGroup>
 
 </Project>
