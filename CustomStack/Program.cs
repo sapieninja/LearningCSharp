@@ -1,4 +1,4 @@
-﻿#nullable enable
+﻿#pragma warning disable
 using System;
 
 namespace CustomStack
