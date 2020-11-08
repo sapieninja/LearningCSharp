@@ -35,7 +35,6 @@ namespace CustomStack
             Console.WriteLine(stack.pop());
             Console.WriteLine(stack.pop());
             Console.WriteLine(stack.pop());
-            Console.WriteLine(stack.pop());
         }
     }
 }
