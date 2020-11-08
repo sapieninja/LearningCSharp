@@ -1,23 +1,22 @@
-﻿#pragma warning disable
-using System;
+﻿using System;
 
 namespace CustomStack
 {
-    class MyStack
+    class MyStack<T>
     {
         private int StackPointer;
-        private string?[] TheStack;
+        private T[] TheStack;
         public MyStack(int size)
         {
-            TheStack = new string?[size];
+            TheStack = new T[size];
             StackPointer = -1;
         }
-        public void push(string item)
+        public void push(T item)
         {
             StackPointer++;
             TheStack[StackPointer] = item;
         }
-        public string pop()
+        public T pop()
         {
             StackPointer--;
             return TheStack[StackPointer + 1];
@@ -27,7 +26,7 @@ namespace CustomStack
     {
         static void Main(string[] args)
         {
-            var stack = new MyStack(10);
+            var stack = new MyStack<string>(10);
             stack.push("m");
             stack.push("B");
             Console.WriteLine(stack.pop());
