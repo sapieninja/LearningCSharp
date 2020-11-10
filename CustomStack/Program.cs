@@ -1,14 +1,15 @@
-﻿using System;
+﻿#pragma warning disable
+using System;
 
 namespace CustomStack
 {
     class MyStack<T>
     {
         private int StackPointer;
-        private T[] TheStack;
+        private T?[] TheStack;
         public MyStack(int size)
         {
-            TheStack = new T[size];
+            TheStack = new T?[size];
             StackPointer = -1;
         }
         public void push(T item)
