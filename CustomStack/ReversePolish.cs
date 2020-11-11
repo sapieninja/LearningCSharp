@@ -42,7 +42,7 @@ namespace CustomStack
                     ProcessStack.Push(Convert.ToInt32(part));
                 }
             }
-            if (ProcessStack.Length != 0) throw new InvalidOperationException();
+            if (ProcessStack.Length != 1) throw new InvalidOperationException();
             return ProcessStack.Pop();
         }
         private void ConvertString(string ToEvaluate)
