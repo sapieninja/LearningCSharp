@@ -1,3 +1,4 @@
+using System.Diagnostics;
 using System;
 using System.Collections.Generic;
 namespace CustomStack
@@ -26,7 +27,9 @@ namespace CustomStack
                             result = ProcessStack.Pop() * ProcessStack.Pop();
                             break;
                         case "/":
-                            result = ProcessStack.Pop() / ProcessStack.Pop();
+                            var divisor = ProcessStack.Pop();
+                            var numerator = ProcessStack.Pop();
+                            result = numerator / divisor;
                             break;
                         case "+":
                             result = ProcessStack.Pop() + ProcessStack.Pop();
@@ -68,7 +71,7 @@ namespace CustomStack
         }
         static void Main()
         {
-            ReversePolish equation = new ReversePolish("3 4 -");
+            ReversePolish equation = new ReversePolish("400 4 /");
             Console.WriteLine(equation.Value);
         }
     }
