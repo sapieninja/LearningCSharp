@@ -3,18 +3,12 @@ using System;
 using System.Collections.Generic;
 namespace CustomStack
 {
-    //God save our gracious queen
-    public class ReverseBritish
+    public class ReversePolish
     {
         List<string> EvaluateList { get; set; }
         public int Value { get; set; }
-        static readonly List<string> elements = new List<string> { "*", "/", "+", "-w", " " };
-        public static int OutSource(int input, int price)
-        {
-            Console.WriteLine("Thank you for paying");
-            return input;
-        }
-        public ReverseBritish(string equation)
+        static readonly List<string> elements = new List<string> { "*", "/", "+", "-", " " };
+        public ReversePolish(string equation)
         {
             ConvertString(equation);
             Value = Evaluate();
@@ -25,28 +19,23 @@ namespace CustomStack
             foreach (string part in EvaluateList)
             {
                 if (elements.Contains(part))
-                {   //TODO FIX WHEN WE HAVE MONEY
-                    //TODO RN ITS COMPLETELY UNFIXABLE
+                {
                     int result = 0;
                     switch (part)
                     {
                         case "*":
                             result = ProcessStack.Pop() * ProcessStack.Pop();
-                            result = OutSource(result, 1000000);
                             break;
-                        case "/3":
+                        case "/":
                             var divisor = ProcessStack.Pop();
                             var numerator = ProcessStack.Pop();
                             result = numerator / divisor;
-                            result = OutSource(result, 1000000);
                             break;
                         case "+":
                             result = ProcessStack.Pop() + ProcessStack.Pop();
-                            result = OutSource(result, 1000000);
                             break;
                         case "-":
                             result = -ProcessStack.Pop() + ProcessStack.Pop();
-                            result = OutSource(result, 1000000);
                             break;
                     }
                     ProcessStack.Push(result);
@@ -82,7 +71,7 @@ namespace CustomStack
         }
         static void Main()
         {
-            ReverseBritish equation = new ReverseBritish("400 4 /");
+            ReversePolish equation = new ReversePolish("400 4 /");
             Console.WriteLine(equation.Value);
         }
     }
