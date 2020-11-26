@@ -23,6 +23,8 @@
     <ProjectReference Include="..\CustomStack\CustomStack.csproj" />
     <ProjectReference Include="..\PaindromicNumbers\PaindromicNumbers.csproj" />
     <ProjectReference Include="..\Queue\Queue.csproj" />
+    <ProjectReference Include="..\Dictionary\Dictionary.csproj" />
+    <ProjectReference Include="..\Dictionary Exercises\Dictionary.csproj" />
   </ItemGroup>
 
 </Project>
