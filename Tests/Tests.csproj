@@ -25,6 +25,7 @@
     <ProjectReference Include="..\Queue\Queue.csproj" />
     <ProjectReference Include="..\Dictionary\Dictionary.csproj" />
     <ProjectReference Include="..\Dictionary Exercises\Dictionary.csproj" />
+    <ProjectReference Include="..\ModernArt\ModernArt.csproj" />
   </ItemGroup>
 
 </Project>
