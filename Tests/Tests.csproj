@@ -16,6 +16,7 @@
   <ItemGroup>
     <ProjectReference Include="..\Drats\Drats.csproj" />
     <ProjectReference Include="..\Iteration\Iteration.csproj" />
+    <ProjectReference Include="..\LinkedList\LinkedList.csproj" />
     <ProjectReference Include="..\ListExercises\ListExercises.csproj" />
     <ProjectReference Include="..\Normalisation\Normalisation.csproj" />
     <ProjectReference Include="..\Question6\Question6.csproj" />
@@ -23,7 +24,6 @@
     <ProjectReference Include="..\CustomStack\CustomStack.csproj" />
     <ProjectReference Include="..\PaindromicNumbers\PaindromicNumbers.csproj" />
     <ProjectReference Include="..\Queue\Queue.csproj" />
-    <ProjectReference Include="..\Dictionary\Dictionary.csproj" />
     <ProjectReference Include="..\Dictionary Exercises\Dictionary.csproj" />
     <ProjectReference Include="..\ModernArt\ModernArt.csproj" />
   </ItemGroup>
